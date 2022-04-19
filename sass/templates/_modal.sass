@@ -1,0 +1,88 @@
+.modal
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    z-index: 199
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    overflow: auto
+    transition: 0.3s
+    padding-top: 40px
+    padding-bottom: 40px
+    backdrop-filter: blur(4px)
+    &--active
+        opacity: 1
+        visibility: visible
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            top: 0
+            background: linear-gradient( to right top, #47345c6c, #1e1e1e)
+            filter: blur(100px)
+    &-main
+        &__dialog
+            width: 100%
+            max-width: 450px
+            padding: 50px 30px
+            background-color: #fff
+            position: relative
+            z-index: 2
+            text-align: center
+        &__title
+            font-size: 32px
+            font-family: 'Jura', sans-serif
+            font-weight: 500
+            margin-bottom: 20px
+        &__text
+            margin-bottom: 30px
+        &__input-group
+            width: 100%
+            margin-bottom: 20px
+        &__input
+            width: 100%
+            box-shadow: inset 2px 4px 10px 0 rgba(0, 0, 0, 0.3)
+            border-radius: 5px
+            padding: 16px 20px
+            border: none
+            &:focus
+                outline: none
+        &__button
+            width: 100%
+            padding: 16px 0
+            position: relative
+            overflow: hidden
+            &::after
+                content: ''
+                position: absolute
+                width: 500px
+                height: 40px
+                transform: rotate(30deg)
+                background: linear-gradient( to bottom, #ffffff, #434242)
+                opacity: 0.3
+                left: -100%
+                top: -10px
+                transition: 0.8s
+                z-index: 3
+                animation: toRight 5s infinite
+            &:hover
+                transform: none
+        &__close
+            position: absolute
+            top: 0
+            right: 10px
+            z-index: 2
+            font-size: 50px
+            color: #fff
+            cursor: pointer
+            line-height: 100%
+            color: #434242

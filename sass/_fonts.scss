@@ -1,0 +1,43 @@
+//Jura
+
+@font-face {
+    font-family: 'Jura';
+    src:
+    url('../fonts/Jura/Jura-Medium.woff') format('woff'),
+    url('../fonts/Jura/Jura-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jura';
+    src:
+    url('../fonts/Jura/Jura-Regular.woff') format('woff'),
+    url('../fonts/Jura/Jura-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+//OpenSans
+
+@font-face {
+    font-family: 'OpenSans';
+    src:
+    url('../fonts/OpenSans/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/OpenSans/OpenSans-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src:
+    url('../fonts/OpenSans/OpenSans-Regular.woff') format('woff'),
+    url('../fonts/OpenSans/OpenSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

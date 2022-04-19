@@ -1,0 +1,93 @@
+.graph
+    background: url(../img/bg/bg1.webp) no-repeat center
+    padding-top: 80px
+    padding-bottom: 150px
+    background-size: cover
+    position: relative
+    overflow: hidden
+    &::after
+        content: ''
+        position: absolute
+        left: 50%
+        bottom: -100px
+        transform: translateX(-50%)
+        width: 80%
+        border-radius: 50%
+        height: 200px
+        background-color: #3d4076
+        filter: blur(72px)
+        z-index: 1
+    &__container
+        border: 1px solid rgba(132, 132, 132, 0.3)
+        border-top: none
+        border-bottom: none
+        position: relative
+        z-index: 2
+    &__title
+        max-width: 360px
+        text-align: left
+        margin: 0
+    &__row
+        justify-content: center
+        margin-bottom: 120px
+    &__img
+        position: relative
+        width: 820px
+        img
+            position: absolute
+            left: 0
+            top: 0
+            &:nth-child(2)
+                position: static
+            &:last-of-type
+                top: auto
+                bottom: -60px
+
+.equip
+    &__title
+        max-width: 600px
+        margin-bottom: 180px
+    &__row
+        max-width: 980px
+        margin: auto
+    &__card
+        width: 270px
+        height: 410px
+        background: #1c1c2a
+        color: #fff
+        text-align: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        position: relative
+        padding: 120px 20px 20px
+        &--center
+            background: transparent
+            border: 1px solid #1c1c2a
+            color: #1C1D2B
+            transform: translateY(-30px)
+        &__button
+            width: 100%
+            background: transparent
+            border: 1px solid #379fdc
+            color: #379fdc
+            font-size: 14px
+            font-weight: 300
+            text-transform: uppercase
+            letter-spacing: 2px
+            &:hover
+                transform: none
+                background-color: #379fdc
+                color: #fff
+        &__title
+            font-size: 20px
+            margin-bottom: 20px
+        &__text
+            font-size: 15px
+        img
+            max-width: 200px
+            position: absolute
+            left: 50%
+            top: 0
+            transform: translate(-50%, -50%)
