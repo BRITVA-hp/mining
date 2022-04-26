@@ -1,7 +1,74 @@
 .cons
-    margin-top: -100px
     position: relative
     z-index: 2
+    padding-left: 0
+    padding-right: 0
+    background: #113456
+    padding: 10px 10px 0
+    &__interface
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        max-width: 1400px
+        margin: auto
+        margin-bottom: 20px
+    &__arrow
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        &--prev
+            margin-right: 10px
+        &--inactive
+            opacity: 0.5
+    &__play
+        cursor: pointer
+        border-radius: 50%
+        background-color: #fff
+        padding: 12px
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+    &__window
+        margin: auto
+        max-width: 1400px
+        overflow: hidden
+        &--mob
+            display: none
+    &__field
+        display: flex
+        transition: 0.3s
+    &__card
+        width: 350px
+        height: 400px
+        background: url(../img/cons/screen1.png) no-repeat center
+        background-size: cover
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        clip-path: polygon(0 30%, 15% 0, 95% 0, 100% 5%, 100% 70%, 85% 100%, 5% 100%, 0 95%)
+        margin-right: 20px
+        border: thick double #000
+        &:last-of-type
+            margin-right: 0
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            background-color: rgba(0, 0, 0, 0.5)
+        &--2
+            background: url(../img/cons/screen2.png) no-repeat center
+        &--3
+            background: url(../img/cons/screen3.png) no-repeat center
+        &--4
+            background: url(../img/cons/screen4.png) no-repeat center
+        &--5
+            background: url(../img/cons/screen5.png) no-repeat center
     &__box
         margin: auto
         max-width: 1400px
@@ -9,6 +76,9 @@
         background: url(../img/bg/usefull-bg.png) no-repeat center
         padding: 80px 100px
         background-size: 100% 100%
+        position: relative
+        z-index: 3
+        margin-bottom: 40px
     &__title
         max-width: 700px
         margin-bottom: 40px
@@ -17,3 +87,6 @@
         width: 100%
         max-width: 380px
         margin: auto
+    &__container
+        background: url(../img/bg/bg3.webp) no-repeat center
+        clip-path: polygon(0 20%, 20% 0, 80% 0, 100% 20%, 100% 100%, 0 100%)

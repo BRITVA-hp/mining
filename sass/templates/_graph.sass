@@ -1,28 +1,40 @@
 .graph
     background: url(../img/bg/bg1.webp) no-repeat center
     padding-top: 80px
-    padding-bottom: 150px
+    padding-bottom: 200px
     background-size: cover
     position: relative
     overflow: hidden
-    &::after
-        content: ''
-        position: absolute
-        left: 50%
-        bottom: -100px
-        transform: translateX(-50%)
-        width: 80%
-        border-radius: 50%
-        height: 200px
-        background-color: #3d4076
-        filter: blur(72px)
-        z-index: 1
     &__container
         border: 1px solid rgba(132, 132, 132, 0.3)
         border-top: none
         border-bottom: none
         position: relative
         z-index: 2
+        &::before
+            content: ''
+            position: absolute
+            left: -2px
+            top: 50%
+            transform: translateY(-50%)
+            background: #fff
+            width: 3px
+            height: 62%
+            filter: drop-shadow(0 0 5px #A07633)
+            border-top: 1.25rem solid #A07633
+            border-bottom: 1.25rem solid #A07633
+        &::after
+            content: ''
+            position: absolute
+            right: -2px
+            top: 50%
+            transform: translateY(-50%)
+            background: #fff
+            width: 3px
+            height: 40%
+            filter: drop-shadow(0 0 5px #A07633)
+            border-top: 1.25rem solid #A07633
+            border-bottom: 1.25rem solid #A07633
     &__title
         max-width: 360px
         text-align: left

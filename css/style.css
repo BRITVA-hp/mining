@@ -452,6 +452,22 @@ body {
   100% {
     left: 100%; } }
 
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
 .header {
   color: #ffffff;
   padding-top: 20px;
@@ -694,28 +710,40 @@ body {
 .graph {
   background: url(../img/bg/bg1.webp) no-repeat center;
   padding-top: 80px;
-  padding-bottom: 150px;
+  padding-bottom: 200px;
   background-size: cover;
   position: relative;
   overflow: hidden; }
-  .graph::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -100px;
-    transform: translateX(-50%);
-    width: 80%;
-    border-radius: 50%;
-    height: 200px;
-    background-color: #3d4076;
-    filter: blur(72px);
-    z-index: 1; }
   .graph__container {
     border: 1px solid rgba(132, 132, 132, 0.3);
     border-top: none;
     border-bottom: none;
     position: relative;
     z-index: 2; }
+    .graph__container::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      width: 3px;
+      height: 62%;
+      filter: drop-shadow(0 0 5px #A07633);
+      border-top: 1.25rem solid #A07633;
+      border-bottom: 1.25rem solid #A07633; }
+    .graph__container::after {
+      content: '';
+      position: absolute;
+      right: -2px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      width: 3px;
+      height: 40%;
+      filter: drop-shadow(0 0 5px #A07633);
+      border-top: 1.25rem solid #A07633;
+      border-bottom: 1.25rem solid #A07633; }
   .graph__title {
     max-width: 360px;
     text-align: left;
@@ -787,16 +815,87 @@ body {
     transform: translate(-50%, -50%); }
 
 .cons {
-  margin-top: -100px;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  padding-left: 0;
+  padding-right: 0;
+  background: #113456;
+  padding: 10px 10px 0; }
+  .cons__interface {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 1400px;
+    margin: auto;
+    margin-bottom: 20px; }
+  .cons__arrow {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .cons__arrow--prev {
+      margin-right: 10px; }
+    .cons__arrow--inactive {
+      opacity: 0.5; }
+  .cons__play {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .cons__window {
+    margin: auto;
+    max-width: 1400px;
+    overflow: hidden; }
+    .cons__window--mob {
+      display: none; }
+  .cons__field {
+    display: flex;
+    transition: 0.3s; }
+  .cons__card {
+    width: 350px;
+    height: 400px;
+    background: url(../img/cons/screen1.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    -webkit-clip-path: polygon(0 30%, 15% 0, 95% 0, 100% 5%, 100% 70%, 85% 100%, 5% 100%, 0 95%);
+    clip-path: polygon(0 30%, 15% 0, 95% 0, 100% 5%, 100% 70%, 85% 100%, 5% 100%, 0 95%);
+    margin-right: 20px;
+    border: thick double #000; }
+    .cons__card:last-of-type {
+      margin-right: 0; }
+    .cons__card::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5); }
+    .cons__card--2 {
+      background: url(../img/cons/screen2.png) no-repeat center; }
+    .cons__card--3 {
+      background: url(../img/cons/screen3.png) no-repeat center; }
+    .cons__card--4 {
+      background: url(../img/cons/screen4.png) no-repeat center; }
+    .cons__card--5 {
+      background: url(../img/cons/screen5.png) no-repeat center; }
   .cons__box {
     margin: auto;
     max-width: 1400px;
     color: #fff;
     background: url(../img/bg/usefull-bg.png) no-repeat center;
     padding: 80px 100px;
-    background-size: 100% 100%; }
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 40px; }
   .cons__title {
     max-width: 700px;
     margin-bottom: 40px; }
@@ -805,6 +904,10 @@ body {
     width: 100%;
     max-width: 380px;
     margin: auto; }
+  .cons__container {
+    background: url(../img/bg/bg3.webp) no-repeat center;
+    -webkit-clip-path: polygon(0 20%, 20% 0, 80% 0, 100% 20%, 100% 100%, 0 100%);
+    clip-path: polygon(0 20%, 20% 0, 80% 0, 100% 20%, 100% 100%, 0 100%); }
 
 .modal {
   opacity: 0;
@@ -838,6 +941,13 @@ body {
       top: 0;
       background: linear-gradient(to right top, #47345c6c, #1e1e1e);
       filter: blur(100px); }
+  .modal-video__dialog {
+    position: relative;
+    z-index: 1; }
+  .modal-video__video {
+    display: block;
+    margin: auto;
+    max-height: 90vh; }
   .modal-main__dialog {
     width: 100%;
     max-width: 450px;
@@ -912,10 +1022,14 @@ body {
 
 @media screen and (max-width: 991px) {
   .cons {
-    padding-left: 0 !important;
-    padding-right: 0 !important; }
+    padding: 0 !important; }
+    .cons__box {
+      margin-bottom: 20px; }
     .cons__title {
       max-width: 500px; }
+    .cons__container {
+      -webkit-clip-path: none;
+      clip-path: none; }
   .equip__title {
     max-width: 400px;
     margin-bottom: 120px; }
@@ -930,7 +1044,7 @@ body {
   .section__title {
     font-size: 26px; }
   .graph {
-    padding-bottom: 0; }
+    padding-bottom: 50px; }
     .graph__title {
       padding-top: 60px; }
     .graph__row {
@@ -995,6 +1109,20 @@ body {
       display: none; } }
 
 @media screen and (max-width: 767px) {
+  .cons__interface {
+    display: none; }
+  .cons__card {
+    min-width: 300px;
+    height: 350px;
+    margin-right: 10px;
+    width: auto; }
+  .cons__field {
+    padding: 0 10px; }
+  .cons__window {
+    display: none; }
+    .cons__window--mob {
+      display: block;
+      overflow: auto; }
   .modal-main__input {
     font-size: 14px; }
   .modal-main__title {
@@ -1068,7 +1196,8 @@ body {
 @media screen and (max-width: 575px) {
   .cons__box {
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    background-size: 130% 100%; }
   .cons__title {
     max-width: 300px; }
   .graph::after {
