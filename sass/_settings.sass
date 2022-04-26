@@ -30,8 +30,34 @@ body
     display: inline-block
     &:hover
         transform: scale(1.05)
-    &--back
-        background-color: #ffffff
-        border: 1px solid #BDBDBD
-        color: #111313
-        margin-right: 20px
+    &--effect
+        position: relative
+        overflow: hidden
+        &:hover
+            transform: none
+        &::after
+            content: ''
+            position: absolute
+            width: 500px
+            height: 40px
+            transform: rotate(30deg)
+            background: linear-gradient( to bottom, #ffffff, #434242)
+            opacity: 0.3
+            left: -100%
+            top: -10px
+            transition: 0.8s
+            z-index: 3
+            animation: toRight 5s infinite
+
+.input
+    width: 100%
+    box-shadow: inset 2px 4px 10px 0 rgba(212,171,55, 0.3)
+    border-radius: 5px
+    padding: 16px 20px
+    border: none
+    &:focus
+        outline: none
+    
+.input-group
+    width: 100%
+    margin-bottom: 20px

@@ -53,6 +53,16 @@
             background-color: #BD8B21
     &__logo
         margin-right: 70px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            left: 10px
+            top: 0px
+            width: 20px
+            height: 20px
+            background: url(../img/logo/logo.png) no-repeat center
+            background-size: contain
         &__title
             font-family: 'Jura', sans-serif
             text-align: right

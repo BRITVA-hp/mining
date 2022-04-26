@@ -29,6 +29,27 @@
             top: 0
             background: linear-gradient( to right top, #e7c566, #1e1e1e)
             filter: blur(100px)
+    &-thanks
+        &__text
+            margin-bottom: 20px
+        &__title
+            font-size: 36px
+            margin-bottom: 20px
+            color: #D4AB37
+        &__dialog
+            width: 100%
+            max-width: 400px
+            background-color: #fff
+            position: relative
+            z-index: 1
+            padding: 40px
+            text-align: center
+        &__close
+            position: absolute
+            right: 10px
+            top: 10px
+            font-size: 36px
+            font-weight: bold
     &-video
         &__dialog
             position: relative
@@ -56,36 +77,12 @@
         &__text
             margin-bottom: 30px
         &__input-group
-            width: 100%
-            margin-bottom: 20px
+
         &__input
-            width: 100%
-            box-shadow: inset 2px 4px 10px 0 rgba(212,171,55, 0.3)
-            border-radius: 5px
-            padding: 16px 20px
-            border: none
-            &:focus
-                outline: none
+
         &__button
             width: 100%
             padding: 16px 0
-            position: relative
-            overflow: hidden
-            &::after
-                content: ''
-                position: absolute
-                width: 500px
-                height: 40px
-                transform: rotate(30deg)
-                background: linear-gradient( to bottom, #ffffff, #434242)
-                opacity: 0.3
-                left: -100%
-                top: -10px
-                transition: 0.8s
-                z-index: 3
-                animation: toRight 5s infinite
-            &:hover
-                transform: none
         &__close
             position: absolute
             top: 0

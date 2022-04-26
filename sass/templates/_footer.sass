@@ -1,0 +1,49 @@
+.footer
+    background-color: #2F3338
+    color: #fff
+    padding: 60px 20px
+    position: relative
+    &__container
+        position: relative
+        z-index: 2
+    &__img
+        position: absolute
+        transform: rotate(90deg)
+        left: -100px
+        top: -150px
+        z-index: 1
+    &__call
+        color: #D4AB37
+        text-align: center
+    &__logo
+        text-align: right
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            left: 10px
+            top: 0
+            width: 20px
+            height: 20px
+            background: url(../img/logo/logo.png) no-repeat center
+            background-size: contain
+    &__nav
+        margin: 0
+        border: none
+    &__text
+        text-align: right
+        margin-right: 60px
+    &__title
+        text-align: right
+        margin-bottom: 10px
+    &__form
+        padding: 20px
+        border: 1px solid #D4AB37
+        border-radius: 10px
+        width: 350px
+    &__button
+        width: 100%
+        padding: 16px 0
+    &__row
+        justify-content: center
+        margin-bottom: 40px

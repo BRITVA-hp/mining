@@ -5,15 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/style.css">
 
-    <title>Document</title>
+    <title>Майнинг-оборудование</title>
 </head>
 <body>
 
     <main>
 
         <section class="section main">
+            <img class="main__decor" src="img/main/img.png" alt="mining">
 
             <div class="header section">
                 <div class="container header__container">
@@ -174,11 +183,11 @@
                         <div class="equip__card equip__card--center">
                             <img src="img/graph/equip/img2.webp" alt="equipment">
                             <div class="equip__card__box">
-                                <p class="equip__card__title">LOREM - LOREM</p>
-                                <p class="equip__card__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, libero cumque id voluptatum nulla inventore tempora impedit,</p>
+                                <p class="equip__card__title">Консультация</p>
+                                <p class="equip__card__text">Подберем оборудование и поможем начать зарабатывать на майнинге.</p>
                             </div>
         
-                            <button data-modal class="button equip__card__button">Заказать</button>
+                            <button data-modal class="button equip__card__button">Заказать консультацию</button>
                         </div>
     
                         <div class="equip__card">
@@ -288,21 +297,112 @@
             </div>
         </section>
 
+        <section class="section sphere">
+
+            <div class="container sphere__container">
+                <h3 class="section__title sphere__title">Хочешь быстро влиться в сферу майнинга? <br> <strong data-modal href="">СВЯЖИСЬ С НАМИ</strong> <br> и мы поможем!</h3>
+
+                <div class="sphere__box">
+                    <div class="sphere__card sphere__card--1 sphere__card--big"></div>
+                    <div class="sphere__card sphere__card--2 sphere__card--big"></div>
+                    <div class="sphere__card sphere__card--3"></div>
+                    <div class="sphere__card sphere__card--4"></div>
+                    <div class="sphere__card sphere__card--5"></div>
+                    <div class="sphere__card sphere__card--6"></div>
+                    <div class="sphere__card sphere__card--7"></div>
+                    <div class="sphere__card sphere__card--8"></div>
+                </div>
+            </div>
+
+        </section>
+        <!-- /.section sphere -->
+
     </main>
+
+    <footer class="footer section">
+
+        <img class="footer__img" src="img/decor/hand.webp" alt="hand">
+
+       <div class="container footer__container">
+
+            <div class="row footer__row">
+                <div class="footer__text">
+                    <h4 class="footer__title section__title">Есть вопросы?</h4>
+                    <p class="footer__subtitle">Дадим полную, бесплатную консультацию.</p>
+                </div>
+
+                <form action="#" class="footer__form">
+                    <div class="input-group footer__input-group">
+                        <input placeholder="Ваше имя" type="text" class="input footer__input">
+                    </div>
+                    <div class="input-group footer__input-group">
+                        <input placeholder="Номер телефона" type="text" class="input footer__input">
+                    </div>
+
+                    <button class="button footer__button button--effect">Отправить</button>
+                </form>
+            </div>
+
+            <div class="row footer__bot">
+                <div class="footer__logo">
+                    <p class="footer__logo__text">Lorem <br> LoremLorem</p>
+                </div>
+
+                <nav class="main__nav footer__nav">
+
+                    <ul class="main__ul row footer__ul">
+                        <li class="main__li">
+                            <a href="#">О нас</a>
+                        </li>
+                        <li class="main__li">
+                            <a href="#">Каталог</a>
+                        </li>
+                        <li class="main__li">
+                            <a href="#">Услуги</a>
+                        </li>
+                        <li class="main__li">
+                            <a href="#">Доставка и оплата</a>
+                        </li>
+                        <li class="main__li">
+                            <a href="#">Блог</a>
+                        </li>
+                        <li class="main__li">
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="tel:+7(921) 123-45-67" class="footer__call">Позвонить нам: +7(921) 123-45-67</a>
+            </div>
+
+       </div> 
+
+    </footer>
+    <!-- /.footer section -->
 
     <div class="modal modal-main">
         <div class="modal-main__dialog">
             <div class="modal-main__close">&times;</div>
             <p class="modal-main__title">Оставить заявку</p>
             <p class="modal-main__text">Оставьте свой номер - наш специалист перезвонит в ближайшее время</p>
-            <div class="modal-main__input-group">
-                <input placeholder="Ваше имя" type="text" class="modal-main__input">
+            <div class="modal-main__input-group input-group">
+                <input placeholder="Ваше имя" type="text" class="modal-main__input input">
             </div>
-            <div class="modal-main__input-group">
-                <input placeholder="Номер телефона" type="tel" class="modal-main__input">
+            <div class="modal-main__input-group input-group">
+                <input placeholder="Номер телефона" type="tel" class="modal-main__input input">
             </div>
 
-            <button class="button modal-main__button">Отправить</button>
+            <button class="button modal-main__button button--effect">Отправить</button>
+        </div>
+
+    </div>
+
+    <div class="modal modal-thanks">
+        <div class="modal-thanks__dialog">
+            <div class="modal-thanks__close">&times;</div>
+            <p class="modal-thanks__title">Заявка отправлена!</p>
+            <p class="modal-thanks__text">Наш специалист перезвонит в ближайшее время</p>
+            <img src="img/decor/coin.webp" alt="">
         </div>
 
     </div>
