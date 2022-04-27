@@ -247,4 +247,71 @@ document.addEventListener('DOMContentLoaded', () => {
 
     video();
 
+    const forms = document.querySelectorAll('form');
+
+       forms.forEach(item => {
+           bindPostData(item);
+       });
+
+       const postData = async (url, data) => {
+           let res = await fetch(url, {
+               method: "POST",
+               headers: {
+                   'Content-Type': 'application/json'
+               },
+               body: data
+           });
+
+           return await res.json();
+       };
+
+       async function getResource(url) {
+           let res = await fetch(url);
+
+           if (!res.ok) {
+               throw new Error(`Could not fetch ${url}, status: ${res.status}`);
+           }
+
+           return await res.json();
+       }
+
+       function bindPostData(form) {
+           form.addEventListener('submit', (e) => {
+               e.preventDefault();
+
+               const formData = new FormData(form);
+  
+               const data = {
+                    api_token: 'kDyfNjQ02nt7Mceh3sqMOnIbKJEcBeyVD9ZqZ5oSABGWCKDZOpipGEiTijFR',
+                    name: formData.get('name'),
+                    phone: formData.get('phone').replace(/[^0-9]/g,""),
+                    //host: window.location.host,
+                    host: 'miner-boost.ru',
+                    referrer: document.referrer,
+                    url_query_string: window.location.href
+               }; 
+
+               if (data.name.length === 0 || data.phone.length === 0 ){
+                   alert("Не все поля заполнены!!!")
+                   return
+               }
+
+               const json = JSON.stringify(data);
+            
+               postData('https://in.leads-hunter.com/api/v1/lead.add', json)
+                   .then(data => {
+                       console.log(data);
+                       if (data.data.response === 200 || data.data.response === 201){
+                        alert("Заявка успешно оформлена!")
+                    }
+                      // showThanksModal(message.success);
+                       statusMessage.remove();
+                   }).catch(() => {
+                       // showThanksModal(message.failure);
+                   }).finally(() => {
+                       form.reset();
+                   });
+           });
+       }
+
 });
