@@ -68,54 +68,51 @@
 
                     <ul class="main__ul row">
                         <li class="main__li">
-                            <a href="#">О нас</a>
+                            <a class="link--anchor" href="#we">О нас</a>
                         </li>
                         <li class="main__li">
-                            <a href="#">Каталог</a>
+                            <a class="link--anchor" href="#catalog">Каталог</a>
                         </li>
                         <li class="main__li">
-                            <a href="#">Услуги</a>
+                            <a class="link--anchor" href="#equip">Услуги</a>
                         </li>
                         <li class="main__li">
-                            <a href="#">Доставка и оплата</a>
+                            <a class="link--anchor" href="#blog">Блог</a>
                         </li>
                         <li class="main__li">
-                            <a href="#">Блог</a>
-                        </li>
-                        <li class="main__li">
-                            <a href="#">Контакты</a>
+                            <a class="link--anchor" href="#footer">Контакты</a>
                         </li>
                     </ul>
                 </nav>
 
                 <nav class="main__nav-mob">
+                    <div class="main__nav-mob__close"></div>
 
-                    <div class="main__nav-mob__text">Навигация &#10155;</div>
-
-                    <div class="main__burger">
-                        <div class="main__line main__line--1"></div>
-                        <div class="main__line main__line--2"></div>
-                        <div class="main__line main__line--3"></div>
+                    <div class="burger-wrap">
+                        <div class="main__nav-mob__text">Меню &#10155;</div>
+    
+                        <div class="main__burger">
+                            <div class="main__line main__line--1"></div>
+                            <div class="main__line main__line--2"></div>
+                            <div class="main__line main__line--3"></div>
+                        </div>
                     </div>
 
                     <ul class="main__ul-mob row">
                         <li class="main__li-mob">
-                            <a href="#">О нас</a>
+                            <a class="link--anchor" href="#we">О нас</a>
                         </li>
                         <li class="main__li-mob">
-                            <a href="#">Каталог</a>
+                            <a class="link--anchor" href="#catalog">Каталог</a>
                         </li>
                         <li class="main__li-mob">
-                            <a href="#">Услуги</a>
+                            <a class="link--anchor" href="#equip">Услуги</a>
                         </li>
                         <li class="main__li-mob">
-                            <a href="#">Доставка и оплата</a>
+                            <a class="link--anchor" href="#blog">Блог</a>
                         </li>
                         <li class="main__li-mob">
-                            <a href="#">Блог</a>
-                        </li>
-                        <li class="main__li-mob">
-                            <a href="#">Контакты</a>
+                            <a class="link--anchor" href="#footer">Контакты</a>
                         </li>
                     </ul>
                 </nav>
@@ -167,7 +164,7 @@
 
                 </div>
 
-                <div class="equip">
+                <div id="equip" class="equip">
 
                     <h3 class="section__title equip__title">Более 2000 наименований оборудования для майнинга</h3>
     
@@ -211,7 +208,22 @@
         </section>
         <!-- /.section graph -->
 
-        <section class="section cons">
+        <section id="we" class="section we">
+
+            <div class="container we__container">
+                <div class="we__box">
+                    <h3 class="we__title section__title"><span>MINER-BOOST.</span> Организуем вам бизнес на майнинге под ключ</h3>
+                    <p class="we__subtitle">Подбор оборудования для майнинга исходя из бюджета и желаемой доходности. <br> Поставка оборудования со склада в Самаре или из Китая. </p>
+                    <p class="we__text">Также мы оказываем услуги: оборудование помещения под майнинг, ремонт, скупка оборудования, обучение ремонту и обслуживанию.</p>
+
+                    <button class="button we__button">Подбор оборудования</button>
+                </div>
+            </div>
+
+        </section>
+        <!-- /.section we -->
+
+        <section id="blog" class="section cons">
             <div class="cotainer cons__container">
                 <div class="cons__box">
                     <h3 class="section__title cons__title">Проконсультируем и поможем выбрать оборудование</h3>
@@ -300,7 +312,7 @@
             </div>
         </section>
 
-        <section class="section sphere">
+        <section id="catalog" class="section sphere">
 
             <div class="container sphere__container">
                 <h3 class="section__title sphere__title">Хочешь быстро влиться в сферу майнинга? <br> <strong data-modal href="">СВЯЖИСЬ С НАМИ</strong> <br> и мы поможем!</h3>
@@ -322,7 +334,7 @@
 
     </main>
 
-    <footer class="footer section">
+    <footer id="footer" class="footer section">
 
         <img class="footer__img" src="img/decor/hand.webp" alt="hand">
 
@@ -361,13 +373,10 @@
                             <a href="#">Каталог</a>
                         </li>
                         <li class="main__li footer__li">
-                            <a href="#">Услуги</a>
+                            <a href="#equip">Услуги</a>
                         </li>
                         <li class="main__li footer__li">
-                            <a href="#">Доставка и оплата</a>
-                        </li>
-                        <li class="main__li footer__li">
-                            <a href="#">Блог</a>
+                            <a href="#blog">Блог</a>
                         </li>
                         <li class="main__li footer__li">
                             <a href="#">Контакты</a>

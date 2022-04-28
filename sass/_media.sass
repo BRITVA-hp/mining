@@ -1,3 +1,8 @@
+@media screen and ( max-width: 1400px )
+    .we
+        &__box
+            max-width: 620px
+
 @media screen and ( max-width: 1200px )
     .footer
         &__call
@@ -29,6 +34,25 @@
                     left: -20px
 
 @media screen and ( max-width: 991px )
+    .we
+        &__box
+            width: 60%
+        &__subtitle
+            max-width: 500px
+        &__title
+            max-width: 400px
+            margin-bottom: 20px
+        &__subtitle
+            font-size: 16px
+            margin-bottom: 10px
+        &__text
+            font-size: 14px
+            max-width: 550px
+            margin-bottom: 30px
+        &__button
+            font-size: 16px
+            max-width: 300px
+    
     .footer
         padding: 40px 10px
         &__call
@@ -75,7 +99,7 @@
             font-size: 26px
 
     .graph
-        padding-bottom: 50px
+        padding-bottom: 0px
         &__title
             padding-top: 60px
         &__row
@@ -149,6 +173,22 @@
                 display: none
 
 @media screen and ( max-width: 767px )
+    .we
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/bg/we.jpg) no-repeat calc( 100% + 400px ) bottom
+        &__box
+            margin: auto
+            text-align: center
+            width: 100%
+        &__subtitle, &__text
+            margin-left: auto
+            margin-right: auto
+        &__title
+            margin: auto
+            margin-bottom: 20px
+            text-align: center
+            span
+                display: block
+
     .footer
         &__img
             top: 0
@@ -213,7 +253,6 @@
                 padding: 40px 20px
 
     .cons
-        margin-top: -100px
         &__title
             max-width: 420px
         &__button
@@ -280,6 +319,9 @@
             display: flex
 
 @media screen and ( max-width: 575px )
+    .burger-wrap
+        top: 110px
+
     .cons
         &__box
             padding-left: 10px
@@ -298,10 +340,6 @@
             img
                 &:last-of-type
                     left: -90px
-
-    .main
-        &__nav-mob
-            right: -10px
 
     .section
         padding-left: 10px

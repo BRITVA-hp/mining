@@ -329,6 +329,9 @@ template {
   padding: 0;
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 img {
   max-width: 100%;
   height: auto; }
@@ -338,7 +341,7 @@ body {
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
-  background-color: #1c1d2b;
+  background-color: #BD8B21;
   color: #0D0D0D; }
 
 .button {
@@ -573,12 +576,13 @@ body {
     left: -200px;
     top: 0; }
   .main__nav-mob {
-    z-index: 3;
-    position: absolute;
-    right: -20px;
-    top: 20px;
+    z-index: 198;
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    top: 0;
     border-top: none;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     display: none;
     margin-bottom: 0 !important;
     transition: 0.3s;
@@ -589,23 +593,51 @@ body {
       font-size: 14px; }
     .main__nav-mob--active {
       padding: 10px;
+      padding-top: 30px;
       box-shadow: 0 0 10px #D4AB37;
       border: 1px solid rgba(212, 171, 55, 0.3); }
       .main__nav-mob--active ul {
         width: 126px; }
-      .main__nav-mob--active .main__nav-mob__text {
+      .main__nav-mob--active .burger-wrap {
         display: none; }
+    .main__nav-mob__close {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 30px;
+      height: 23px; }
+      .main__nav-mob__close::before {
+        content: '';
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #D4AB37;
+        position: absolute;
+        transform: rotate(-45deg);
+        transform-origin: right top; }
+      .main__nav-mob__close::after {
+        content: '';
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #D4AB37;
+        position: absolute;
+        transform: rotate(45deg);
+        transform-origin: right bottom; }
     .main__nav-mob__text {
       font-size: 14px;
       position: absolute;
-      right: -26px;
-      top: 40px;
+      right: -18px;
+      top: 20px;
       transform: rotate(-90deg);
       white-space: nowrap;
       font-weight: 500;
       color: #D4AB37; }
   .main__ul-mob {
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-end;
     list-style-type: none;
     width: 0;
@@ -618,16 +650,6 @@ body {
     position: absolute;
     right: 5px;
     top: -35px; }
-    .main__burger--active {
-      height: 23px; }
-      .main__burger--active .main__line--1 {
-        transform: rotate(-45deg);
-        transform-origin: right top; }
-      .main__burger--active .main__line--2 {
-        width: 0; }
-      .main__burger--active .main__line--3 {
-        transform: rotate(45deg);
-        transform-origin: right bottom; }
   .main__line {
     position: absolute;
     width: 100%;
@@ -742,6 +764,12 @@ body {
       left: 0;
       top: 12px; }
 
+.burger-wrap {
+  position: fixed;
+  right: 10px;
+  top: 120px;
+  z-index: 198; }
+
 .graph {
   background: url(../img/bg/bg1.webp) no-repeat center;
   padding-top: 80px;
@@ -850,6 +878,32 @@ body {
     left: 50%;
     top: 0;
     transform: translate(-50%, -50%); }
+
+.we {
+  color: #fff;
+  background: url(../img/bg/we.jpg) no-repeat center bottom;
+  background-size: cover;
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .we__button {
+    width: 100%;
+    max-width: 350px; }
+  .we__title {
+    text-align: left;
+    margin: 0;
+    max-width: 620px;
+    margin-bottom: 40px; }
+    .we__title span {
+      color: #D4AB37; }
+  .we__subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.3; }
+  .we__text {
+    font-size: 16px;
+    line-height: 1.3;
+    max-width: 800px;
+    margin-bottom: 50px; }
 
 .cons {
   position: relative;
@@ -1130,6 +1184,10 @@ body {
     line-height: 100%;
     color: #434242; }
 
+@media screen and (max-width: 1400px) {
+  .we__box {
+    max-width: 620px; } }
+
 @media screen and (max-width: 1200px) {
   .footer__call {
     max-width: 200px; }
@@ -1151,6 +1209,23 @@ body {
     left: -20px; } }
 
 @media screen and (max-width: 991px) {
+  .we__box {
+    width: 60%; }
+  .we__subtitle {
+    max-width: 500px; }
+  .we__title {
+    max-width: 400px;
+    margin-bottom: 20px; }
+  .we__subtitle {
+    font-size: 16px;
+    margin-bottom: 10px; }
+  .we__text {
+    font-size: 14px;
+    max-width: 550px;
+    margin-bottom: 30px; }
+  .we__button {
+    font-size: 16px;
+    max-width: 300px; }
   .footer {
     padding: 40px 10px; }
     .footer__call {
@@ -1192,7 +1267,7 @@ body {
   .section__title {
     font-size: 26px; }
   .graph {
-    padding-bottom: 50px; }
+    padding-bottom: 0px; }
     .graph__title {
       padding-top: 60px; }
     .graph__row {
@@ -1259,6 +1334,21 @@ body {
       display: none; } }
 
 @media screen and (max-width: 767px) {
+  .we {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(../img/bg/we.jpg) no-repeat calc( 100% + 400px) bottom; }
+    .we__box {
+      margin: auto;
+      text-align: center;
+      width: 100%; }
+    .we__subtitle, .we__text {
+      margin-left: auto;
+      margin-right: auto; }
+    .we__title {
+      margin: auto;
+      margin-bottom: 20px;
+      text-align: center; }
+      .we__title span {
+        display: block; }
   .footer__img {
     top: 0;
     left: -150px; }
@@ -1314,14 +1404,12 @@ body {
   .modal-main__dialog {
     max-width: 360px;
     padding: 40px 20px; }
-  .cons {
-    margin-top: -100px; }
-    .cons__title {
-      max-width: 420px; }
-    .cons__button {
-      max-width: 320px; }
-    .cons__box {
-      padding: 50px 0; }
+  .cons__title {
+    max-width: 420px; }
+  .cons__button {
+    max-width: 320px; }
+  .cons__box {
+    padding: 50px 0; }
   .graph {
     padding-top: 40px; }
     .graph__title {
@@ -1378,6 +1466,8 @@ body {
     display: flex; } }
 
 @media screen and (max-width: 575px) {
+  .burger-wrap {
+    top: 110px; }
   .cons__box {
     padding-left: 10px;
     padding-right: 10px;
@@ -1392,8 +1482,6 @@ body {
     width: 100%; }
     .graph__img img:last-of-type {
       left: -90px; }
-  .main__nav-mob {
-    right: -10px; }
   .section {
     padding-left: 10px;
     padding-right: 10px; }

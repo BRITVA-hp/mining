@@ -1,16 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
 
         // burger
-        function burger(burger, burgerActiveClass, menu, menuActiveClass) {
+        function burger(burger, menu, menuActiveClass, burgerClose, elements) {
             const _burger = document.querySelector(burger);
             const _menu = document.querySelector(menu);
+            const _burgerClose = document.querySelector(burgerClose);
+            const _elements = document.querySelectorAll(elements);
             _burger.addEventListener('click', () => {
-                _burger.classList.toggle(burgerActiveClass);
-                _menu.classList.toggle(menuActiveClass);
+                _menu.classList.add(menuActiveClass);
+            });
+            _burgerClose.addEventListener('click', () => {
+                _menu.classList.remove(menuActiveClass);
+            });
+            _elements.forEach(item => {
+                item.addEventListener('click', () => {
+                    _menu.classList.remove(menuActiveClass);
+                });
             });
         }
     
-        burger('.main__burger', 'main__burger--active', '.main__nav-mob', 'main__nav-mob--active');
+        burger('.main__burger', '.main__nav-mob', 'main__nav-mob--active', '.main__nav-mob__close', '.main__li-mob');
 
 
           // функция для модалки
