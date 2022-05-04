@@ -1,0 +1,68 @@
+.catalog
+    background: linear-gradient(180deg, #D4AB37 0%, #fcefc9 10%, #fcefc9 90%, #D4AB37 100%)
+    padding-top: 150px
+    padding-bottom: 150px
+    padding-left: 0 !important
+    padding-right: 0 !important
+    &__window
+        overflow: hidden
+    &__field
+        display: flex
+        transition: 0.3s
+    &__card
+        width: 300px
+        height: 685px
+        border: 1px solid #D4AB37
+        padding: 30px 20px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        font-family: 'Open Sans', sans-serif
+        background-color: #ffffff
+        margin-right: 20px
+        &:last-of-type
+            margin-right: 0
+        &__button
+            width: 100%
+        &__price
+            font-weight: 700
+            font-size: 18px
+            line-height: 140%
+            letter-spacing: 0.02em
+            color: #D4AB37
+        &__ul
+            list-style-type: none
+            font-size: 13px
+            line-height: 170%
+            font-weight: normal
+            margin-bottom: 10px
+        &__title
+            font-style: normal
+            font-weight: 700
+            font-size: 16px
+            margin-bottom: 5px
+        &__more
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            text-decoration-line: underline
+            color: #D4AB37
+            cursor: pointer
+            margin-bottom: 10px
+        &__img
+            display: block
+            margin: auto
+            margin-bottom: 35px
+        &__content
+            width: 100%
+    &__interface
+        display: flex
+        justify-content: flex-end
+        padding: 0 20px
+    &__arrow
+        cursor: pointer
+        &--prev
+            margin-right: 10px
+        &--inactive
+            opacity: 0.5

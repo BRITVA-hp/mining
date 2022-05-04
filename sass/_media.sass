@@ -34,6 +34,18 @@
                     left: -20px
 
 @media screen and ( max-width: 991px )
+    .catalog
+        padding-top: 60px
+        padding-bottom: 60px
+        &__interface
+            padding: 0 10px
+        &__card
+            height: 590px
+            padding: 20px
+            &__img
+                width: 150px
+                margin-bottom: 20px
+
     .we
         &__box
             width: 60%
@@ -243,6 +255,17 @@
                 overflow: auto
 
     .modal
+        &-catalog
+            &__box
+                width: 100%
+            &__row
+                flex-direction: column
+                align-items: flex-start
+            &__dialog
+                padding: 20px
+                max-width: 500px
+            &__description
+                font-size: 14px
         &-main
             &__title
                 font-size: 24px

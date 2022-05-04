@@ -29,6 +29,33 @@
             top: 0
             background: linear-gradient( to right top, #e7c566, #1e1e1e)
             filter: blur(100px)
+    &-catalog
+        &__li
+            display: flex
+            justify-content: space-between
+            background-color: #e7c5668d
+            &:nth-child(2n)
+                background-color: #fff
+        &__row
+            margin-bottom: 10px
+        &__img
+            margin-bottom: 0 !important
+        &__description
+            font-size: 16px
+        &__close
+            position: absolute
+            right: 10px
+            top: 10px
+            font-size: 36px
+            font-weight: bold
+            cursor: pointer
+        &__dialog
+            background-color: #fff
+            position: relative
+            z-index: 1
+            width: 100%
+            max-width: 600px
+            padding: 30px
     &-thanks
         &__text
             margin-bottom: 20px

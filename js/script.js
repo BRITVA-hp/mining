@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     modal('.modal-main', 'modal--active', '[data-modal]', '.modal-main__close');
+    modal('.modal-catalog', 'modal--active', '[data-modalCatalog]', '.modal-catalog__close');
 
               // Функция слайдера
               function slider(window, field, cards, cardWidth, margin, dotsWrap, dotClass, dotClassActive, arrowPrev, arrowNext, arrowClass, sliderName, sliderSlideName) {
@@ -228,6 +229,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 'cons__arrow--inactive'
             );
 
+            slider(
+                '.catalog__window',
+                '.catalog__field',
+                '.catalog__card',
+                300,
+                20,
+                false,
+                false,
+                false,
+                '.catalog__arrow--prev',
+                '.catalog__arrow--next',
+                'catalog__arrow--inactive'
+            );
+
     // Видео
 
     function video() {
@@ -322,5 +337,113 @@ document.addEventListener('DOMContentLoaded', () => {
                    });
            });
        }
+
+    // Подробнее в каталоге
+
+    const catalogData = [
+        {
+            name: 'Canaan Avalon 1066 50th',
+            price: '138 000 ₽',
+            algorithm: 'SHA-256',
+            performance: '50 TH/s',
+            consumption: '3250Вт',
+            fan: '4 кулера',
+            temperature: '-5 °C до 35 °C',
+            weight: '9 кг',
+            description: 'Avalon Miner 1066 с производительностью в 50t – это проверенная уже брендом технология и привычный потребителю формат высокого алюминиевого корпуса. В новом Avalon 1066 50 компания решила выжать максимум из уже известных 16-нм чипов. Показав, что они могут конкурировать на равных с новым поколением 7-нм, на которые выпускаются последние серии асиков.<br><br>При этом цена на новый Avalon Miner 1066 ниже, чем на новые майнеры аналогичной производительности. Еще один аргумент в пользу проверенных технологий.  К тому же помимо BTC  майнер подходит для добычи также Bitcoin Cash,  Crown, Peercoin на алгоритме SHA256.'
+        },
+        {
+            name: 'CAntminer Bitmain SJPRO 100th',
+            price: '615 000 ₽',
+            algorithm: 'SHA-256',
+            performance: '100 TH/s',
+            consumption: '3250Вт',
+            fan: '2 кулера',
+            temperature: '0 °C - 45 °C',
+            dimensions: '37х19.5х29см',
+            weight: '13.5 кг',
+            description: 'Ожидаемо, что новая серия топовых майнеров от Bitmain Technologies сразу вышла в лидеры рынка криптооборудования. Хотя есть конкуренты и среди Whatsminer, но асик S19J PRO обходит его по показателям энергоэффективности. <br><br> Поставляется со встроенным блоком питания Битмайн, чтобы снизить любые энергопотери. И оно того стоит, энергоэффективность нового майнера S19J PRO 100 рекордная для таких мощностей – 32,5J/TH. Плюс блок оснащен защитой от перегрева и скачков напряжения, что крайне важно для такой сложной и прибыльной техники.'
+        },
+        {
+            name: 'MicroBT WhatsMiner m21s 50th',
+            price: '185 000 ₽',
+            algorithm: 'SHA-256',
+            performance: '50 TH/s ± 5%',
+            consumption: '3360Вт',
+            fan: '2 кулера',
+            temperature: '0 °C - 40 °C',
+            weight: '12.5 кг',
+            description: 'Удачная обновленная мощная линейка асиков Whatsminer M21S выпущена как ответ топовым битмайновским майнерам с большим шагом повышения хэшрейта. Потому асик M21S на 12-нм чипах модели TSMC  выдает 50 терахешей производительности без перегрузок. <br><br> Производитель Pangolinminer обрел не так давно новое название -  MicroBT, однако сохранил свои разработки ASIC-устройств. Потому asic M21S 50T сохранил энергетическую эффективность майнера, а также дизайн с двумя кулерами, которые максимально быстро прогоняют воздух через работающий асик и выводят тепло.'
+        },
+        {
+            name: 'MicroBT WhatsMiner m31s 74th',
+            price: '365 000 ₽',
+            algorithm: 'SHA-256',
+            performance: '74TH/s',
+            consumption: '3400Вт',
+            fan: '2 кулера',
+            noise: '75Дб',
+            temperature: '-5°C до 40°C',
+            dimensions: '43x15,5x24м',
+            weight: '12.5 кг',
+            description: 'Удачная обновленная мощная линейка асиков Whatsminer M21S выпущена как ответ топовым битмайновским майнерам с большим шагом повышения хэшрейта. Потому асик M21S на 12-нм чипах модели TSMC  выдает 50 терахешей производительности без перегрузок. <br><br> Производитель Pangolinminer обрел не так давно новое название -  MicroBT, однако сохранил свои разработки ASIC-устройств. Потому asic M21S 50T сохранил энергетическую эффективность майнера, а также дизайн с двумя кулерами, которые максимально быстро прогоняют воздух через работающий асик и выводят тепло.'
+        },
+        {
+            name: 'Antminer Bitmain s17+ 73th',
+            price: '240 000 ₽',
+            algorithm: 'SHA-256',
+            performance: '73TH/s ± 5%',
+            consumption: '2920Вт',
+            fan: '4 кулера',
+            temperature: '0 °C до 40 °C',
+            weight: '11 кг',
+            description: 'Крупнейший майнинг-производитель Bitmain прославился своими стабильно работающими асиками для майнинга, особенно много труда разработчики вкладывают во флагманские модели линеек S17, T17. Такие, как Antminer S17+ 73TH/S, чье сочетание еще в прошлом году поражавшей пределами хэшрейта производительности и энергопотребления вывело Битмайн на новый, недостижимый для некоторых конкурентов, уровень. <br><br> Теперь вы можете купить прибыльный asic S17+ 73T БУ со скидкой, но с сохранением всех его преимуществ. Как то: быстрая система охлаждения при работе с моментальным отводом тепла, легкий и функциональный корпус со встроенным блоком питания.'
+        },
+        {
+            name: 'MicroBT WhatsMiner M30s 86th',
+            price: '560 000 ₽',
+            algorithm: 'SHA-256',
+            performance: '90 TH/s',
+            consumption: '3600Вт',
+            fan: '2 кулера',
+            temperature: '-5 °C до 35 °C',
+            weight: '10.6 кг',
+            description: 'Нет никакого секрета, почему компания Whatsminer смогла добиться в своих асиках такой производительности при сохранении легкости, компактности и низкого потребления. Все дело в 444 чипах от Samsung по 8-нм технологиям, при этом значительно модернизированным, потому частично превосходящим даже асики на чипах 7-нм от конкурентов. <br><br> Добывать с  помощью M30S 90TH  можно не только Bitcoin, но и Bitcoin Cash, Crown, Litecoin Cash, Auroracoin. А его мощность легко заткнет за пояс топовые майнеры от Битмайн и других производителей.'
+        }
+    ]
+
+    function modalCatalog(triggers) {
+        const _triggers = document.querySelectorAll(triggers)
+        const name = document.querySelector('[data-catName]')
+        const price = document.querySelector('[data-catPrice]')
+        const algorithm = document.querySelector('[data-catAlg]')
+        const performance = document.querySelector('[data-catPerf]')
+        const consumption = document.querySelector('[data-catCons]')
+        const fan = document.querySelector('[data-catFan]')
+        const noise = document.querySelector('[data-catNoise]')
+        const temperature = document.querySelector('[data-catTemp]')
+        const dimensions = document.querySelector('[data-catDim]')
+        const weight = document.querySelector('[data-catWeight]')
+        const description = document.querySelector('[data-catDesc]')
+
+        _triggers.forEach((trigger, index) => {
+            trigger.addEventListener('click', () => {
+                catalogData.forEach((item, index2) => {
+                    if (index === index2) {
+                        name.textContent = item.name
+                        price.textContent = item.price
+                        algorithm.lastChild.textContent = item.algorithm
+                        performance.lastChild.textContent = item.performance
+                        consumption.lastChild.textContent = item.consumption
+                        fan.lastChild.textContent = item.fan
+                        item.noise ? noise.lastChild.textContent = item.noise : noise.style.display = 'none'
+                    }
+                })
+            })
+        })
+
+    }
+
+    modalCatalog('[data-modalcatalog]')
 
 });
