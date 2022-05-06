@@ -220,7 +220,7 @@
                 <h3 class="section__title catalog__title">Каталог</h3>
 
                 <div class="catalog__interface">
-                    <img src="img/cons/arrow-left.png" alt="prev" class="catalog__arrow catalog__arrow--prev">
+                    <img src="img/cons/arrow-left.png" alt="prev" class="catalog__arrow catalog__arrow--inactive catalog__arrow--prev">
                     <img src="img/cons/arrow-right.png" alt="next" class="catalog__arrow catalog__arrow--next">
                 </div>
 
@@ -572,19 +572,12 @@
         <div class="modal-catalog__dialog">
             <div class="modal-catalog__close">&times;</div>
             <div class="row modal-catalog__row">
-                <img src="img/catalog/img3.png" alt="miner" class="catalog__card__img modal-catalog__img">
+                <img data-catImg src="img/catalog/img3.png" alt="miner" class="catalog__card__img modal-catalog__img">
                 <div class="modal-catalog__box">
                     <p data-catName class="catalog__card__title">MicroBT WhatsMiner m21s 50th</p>
-                    <p data-catPrice class="catalog__card__price">185 000 ₽</p>
-                    <ul class="catalog__card__ul">
-                        <li data-catAlg class="catalog__card__li modal-catalog__li"><span>Алгоритм</span> <span>SHA-256</span></li>
-                        <li data-catPerf class="catalog__card__li modal-catalog__li"><span>Производительность</span> <span>50 TH/s ± 5%</span></li>
-                        <li data-catCons class="catalog__card__li modal-catalog__li"><span>Потребление</span> <span>3360Вт</span></li>
-                        <li data-catFan class="catalog__card__li modal-catalog__li"><span>Охлаждение</span> <span>2 кулера</span></li>
-                        <li data-catNoise class="catalog__card__li modal-catalog__li"><span>Уровень шума</span> <span>75Дб</span></li>
-                        <li data-catTemp class="catalog__card__li modal-catalog__li"><span>Рабочая температура</span> <span>0 °C - 40 °C</span></li>
-                        <li data-catDim class="catalog__card__li modal-catalog__li"><span>Размеры</span> <span>43x15,5x24см</span></li>
-                        <li data-catWeight class="catalog__card__li modal-catalog__li"><span>Вес</span> <span>12.5 кг</span></li>
+                    <p data-catPrice class="catalog__card__price modal-catalog__price">185 000 ₽</p>
+                    <ul data-catUl class="catalog__card__ul">
+                        <li class="catalog__card__li modal-catalog__li"><span>Алгоритм</span> <span>SHA-256</span></li>
                     </ul>
                 </div>
             </div>

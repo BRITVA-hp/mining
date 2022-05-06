@@ -384,7 +384,8 @@ body {
   box-shadow: inset 2px 4px 10px 0 rgba(212, 171, 55, 0.3);
   border-radius: 5px;
   padding: 16px 20px;
-  border: none; }
+  border: none;
+  border-bottom: 1px solid #D4AB37; }
   .input:focus {
     outline: none; }
 
@@ -1196,6 +1197,8 @@ body {
       top: 0;
       background: linear-gradient(to right top, #e7c566, #1e1e1e);
       filter: blur(100px); }
+  .modal-catalog__box {
+    min-width: 250px; }
   .modal-catalog__li {
     display: flex;
     justify-content: space-between;
@@ -1504,6 +1507,8 @@ body {
     .cons__window--mob {
       display: block;
       overflow: auto; }
+  .modal-catalog__price {
+    margin-bottom: 10px; }
   .modal-catalog__box {
     width: 100%; }
   .modal-catalog__row {
