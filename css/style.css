@@ -1469,6 +1469,10 @@ body {
     left: -20px; } }
 
 @media screen and (max-width: 991px) {
+  .steps {
+    margin-bottom: 50px; }
+    .steps__title {
+      margin-bottom: 25px; }
   .advantages {
     margin-bottom: 50px; }
     .advantages__title {
