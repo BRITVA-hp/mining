@@ -1,0 +1,39 @@
+.steps
+    margin-bottom: 80px
+    &__box
+        display: flex
+        margin: auto
+        flex-wrap: wrap
+        justify-content: center
+    &__title
+        color: #D4AB37
+        margin-bottom: 50px
+    &__card
+        background: rgba(189, 139, 33, 0.1)
+        font-size: 14px
+        font-weight: bold
+        width: 200px
+        height: 200px
+        padding: 10px
+        border: 2px solid #BD8B21
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        margin: 5px
+        transition: 0.3s
+        position: relative
+        &:hover
+            background: rgba(189, 139, 33, 0.3)
+        span
+            display: block
+            max-width: 150px
+        &__number
+            position: absolute
+            font-weight: bold
+            color: #BD8B21
+            font-size: 40px
+            left: 50%
+            bottom: -5px
+            transform: translateX(-50%)

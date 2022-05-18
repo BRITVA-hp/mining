@@ -1,0 +1,61 @@
+.advantages
+    margin-bottom: 80px
+    &__window
+        width: 100%
+        overflow: auto
+    &__title
+        margin-bottom: 50px
+    &__row
+        justify-content: center
+    &__card
+        width: 370px
+        height: 300px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        margin: 10px
+        background-size: 100% 100% !important
+        transition: 0.3s
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            background: rgba(0, 0, 0, 0.6)
+            z-index: 1
+        &:hover
+            background-size: 110% 110% !important 
+        &--1
+            background: url(../img/advantages/img1.jpg) no-repeat center
+        &--2
+            background: url(../img/advantages/img2.jpg) no-repeat center
+        &--3
+            background: url(../img/advantages/img3.jpg) no-repeat center
+    &__ul
+        position: relative
+        z-index: 2
+        color: #fff
+        list-style-type: none
+        max-width: 270px
+    &__li
+        font-size: 16px
+        line-height: 120%
+        margin-bottom: 20px
+        text-align: center
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            left: 50%
+            bottom: -10px
+            transform: translateX(-50%)
+            width: 50px
+            height: 1px
+            background-color: #fff
+        &:last-of-type
+            margin-bottom: 0
+            &::after
+                display: none

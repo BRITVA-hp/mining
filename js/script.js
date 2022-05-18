@@ -245,10 +245,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Видео
 
-    function video() {
-        const play = document.querySelectorAll('.cons__play'),
-            video = document.querySelector('#video'),
-            modalVideo = document.querySelector('.modal-video');
+    function video(triggers, _video, _modalVideo) {
+        const play = document.querySelectorAll(triggers),
+            video = document.querySelector(_video),
+            modalVideo = document.querySelector(_modalVideo);
 
         play.forEach(item => {
             item.addEventListener('click', (e) => {
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    video();
+    video('.cons__play', '#video', '.modal-video');
 
     const forms = document.querySelectorAll('form');
 

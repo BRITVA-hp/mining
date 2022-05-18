@@ -3,7 +3,28 @@
         &__box
             max-width: 620px
 
+@media screen and ( max-width: 1300px )
+    .advantages
+        &__card
+            width: 280px
+            height: 250px
+        &__li
+            font-size: 14px
+        &__ul
+            max-width: 240px
+
 @media screen and ( max-width: 1200px )
+    .reviews
+        padding-bottom: 70px
+        &__title
+            margin-bottom: 70px
+        &__field
+            justify-content: center
+        &__card
+            margin: 10px
+            width: 300px
+            height: 350px
+
     .footer
         &__call
             max-width: 200px
@@ -34,6 +55,31 @@
                     left: -20px
 
 @media screen and ( max-width: 991px )
+
+    .advantages
+        margin-bottom: 50px
+        &__title
+            margin-bottom: 25px
+
+    .reviews
+        padding-left: 0 !important
+        padding-right: 0 !important
+        padding-top: 30px
+        padding-bottom: 30px
+        &__title
+            margin-bottom: 30px
+        &__field
+            width: 960px
+        &__window
+            width: 100%
+            overflow: auto
+
+    .partners
+        &__card
+            margin: 10px
+        &__row
+            justify-content: center
+
     .catalog
         padding-top: 60px
         padding-bottom: 60px
@@ -126,6 +172,18 @@
 
     .main
         padding-bottom: 50px
+        &::before
+            content: ''
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            right: 0
+            background: rgba(0, 0, 0, 0.3)
+            z-index: 2
+        &__decor
+            z-index: 1
+            opacity: 1
         &__box
             padding-left: 40px
         &__effect
@@ -162,6 +220,7 @@
             padding: 5px 10px
         &__title
             font-size: 26px
+            max-width: 410px
         &__subtitle
             font-size: 16px
             padding-left: 35px
@@ -172,6 +231,8 @@
 
     .header
         margin-bottom: 30px
+        position: relative
+        z-index: 3
         &__call
             &__tel
                 span
@@ -183,6 +244,11 @@
                 display: none
             &__text
                 display: none
+
+@media screen and ( max-width: 940px )
+    .advantages
+        &__row
+            width: 900px
 
 @media screen and ( max-width: 767px )
     .we
@@ -313,9 +379,9 @@
             max-width: 500px
         &__card
             text-align: center
-            width: 200px
-            height: 92px
             text-shadow: black 5px 0 10px
+            &__title
+                font-size: 22px
         &__button
             display: block
             margin-left: auto
@@ -333,8 +399,9 @@
             &::before
                 width: 50px
                 left: 50%
-                transform: translate(-50%, -25px)
+                transform: translate(-50%, -18px)
         &__effect
+            opacity: 0.9
             right: 50%
             top: 50%
             transform: translate(50%, -50%)
@@ -344,6 +411,10 @@
             display: flex
 
 @media screen and ( max-width: 575px )
+    .partners
+        padding-left: 0 !important
+        padding-right: 0 !important
+
     .burger-wrap
         top: 110px
 
