@@ -843,10 +843,11 @@ body {
   .steps__title {
     color: #D4AB37;
     margin-bottom: 50px; }
+    .steps__title br {
+      display: none; }
   .steps__card {
     background: rgba(189, 139, 33, 0.1);
     font-size: 14px;
-    font-weight: bold;
     width: 200px;
     height: 200px;
     padding: 10px;
@@ -870,7 +871,7 @@ body {
       color: #BD8B21;
       font-size: 40px;
       left: 50%;
-      bottom: -5px;
+      top: -5px;
       transform: translateX(-50%); }
 
 .graph {
@@ -1079,18 +1080,17 @@ body {
     justify-content: space-between; }
 
 .partners {
-  background: #2A2A2A;
+  background: #fff;
   padding-top: 80px;
   padding-bottom: 80px; }
   .partners__card {
-    margin: 1px;
+    margin: 15px;
     width: 140px;
     height: 99px; }
   .partners__row {
     flex-wrap: wrap; }
   .partners__title {
-    margin-bottom: 50px;
-    color: #fff; }
+    margin-bottom: 50px; }
 
 .we {
   color: #fff;
@@ -1269,6 +1269,8 @@ body {
   color: #fff;
   padding: 60px 20px;
   position: relative; }
+  .footer__logo {
+    min-width: 150px; }
   .footer__container {
     position: relative;
     z-index: 2; }
@@ -1473,6 +1475,8 @@ body {
     margin-bottom: 50px; }
     .steps__title {
       margin-bottom: 25px; }
+      .steps__title br {
+        display: inline; }
   .advantages {
     margin-bottom: 50px; }
     .advantages__title {
@@ -1489,10 +1493,13 @@ body {
     .reviews__window {
       width: 100%;
       overflow: auto; }
-  .partners__card {
-    margin: 10px; }
-  .partners__row {
-    justify-content: center; }
+  .partners {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    .partners__title {
+      margin-bottom: 20px; }
+    .partners__row {
+      justify-content: center; }
   .catalog {
     padding-top: 60px;
     padding-bottom: 60px; }
