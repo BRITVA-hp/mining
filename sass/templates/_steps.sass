@@ -30,11 +30,15 @@
         span
             display: block
             max-width: 150px
+            position: relative
+            z-index: 2
         &__number
             position: absolute
+            z-index: 1
             font-weight: bold
             color: #BD8B21
-            font-size: 40px
+            opacity: 0.3
+            font-size: 150px
             left: 50%
-            top: -5px
-            transform: translateX(-50%)
+            top: 50%
+            transform: translate(-50%, -50%)

@@ -768,7 +768,7 @@ body {
 .burger-wrap {
   position: fixed;
   right: 10px;
-  top: 120px;
+  top: 130px;
   z-index: 198; }
 
 .advantages {
@@ -864,15 +864,19 @@ body {
       background: rgba(189, 139, 33, 0.3); }
     .steps__card span {
       display: block;
-      max-width: 150px; }
+      max-width: 150px;
+      position: relative;
+      z-index: 2; }
     .steps__card__number {
       position: absolute;
+      z-index: 1;
       font-weight: bold;
       color: #BD8B21;
-      font-size: 40px;
+      opacity: 0.3;
+      font-size: 150px;
       left: 50%;
-      top: -5px;
-      transform: translateX(-50%); }
+      top: 50%;
+      transform: translate(-50%, -50%); }
 
 .graph {
   background: url(../img/bg/bg1.webp) no-repeat center;
@@ -950,7 +954,7 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding: 120px 20px 20px; }
+  padding: 105px 20px 20px; }
   .equip__card--center {
     background: transparent;
     border: 1px solid #1c1c2a;
@@ -1638,9 +1642,10 @@ body {
         width: 20px;
         top: 10px; }
   .header {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     position: relative;
-    z-index: 3; }
+    z-index: 3;
+    height: auto; }
     .header__call__tel span {
       display: none; }
     .header__soc {
@@ -1803,8 +1808,6 @@ body {
   .partners {
     padding-left: 0 !important;
     padding-right: 0 !important; }
-  .burger-wrap {
-    top: 110px; }
   .cons__box {
     padding-left: 10px;
     padding-right: 10px;
@@ -1822,10 +1825,8 @@ body {
   .section {
     padding-left: 10px;
     padding-right: 10px; }
-  .header {
-    height: 65px; }
-    .header__soc {
-      display: none; } }
+  .header__soc {
+    display: none; } }
 
 @media screen and (max-width: 450px) {
   .main__title {
