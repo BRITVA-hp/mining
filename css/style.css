@@ -1405,7 +1405,7 @@ body {
   .modal-main__dialog {
     width: 100%;
     max-width: 450px;
-    padding: 50px 30px;
+    padding: 52px 30px;
     background-color: #fff;
     position: relative;
     z-index: 2;
