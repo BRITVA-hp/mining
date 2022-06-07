@@ -1053,9 +1053,12 @@ body {
   .catalog__arrow {
     cursor: pointer; }
     .catalog__arrow--prev {
-      margin-right: 10px; }
+      margin-right: 10px;
+      transform: rotate(4deg); }
     .catalog__arrow--inactive {
       opacity: 0.5; }
+    .catalog__arrow--next {
+      transform: translateY(-2px) rotate(3deg); }
 
 .reviews {
   background: linear-gradient(to bottom, #D4AB37, #BD8B21);
