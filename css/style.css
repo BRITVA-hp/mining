@@ -1145,9 +1145,12 @@ body {
     align-items: center;
     justify-content: center; }
     .cons__arrow--prev {
-      margin-right: 10px; }
+      margin-right: 10px;
+      transform: rotate(4deg); }
     .cons__arrow--inactive {
       opacity: 0.5; }
+    .cons__arrow--next {
+      transform: translateY(-2px) rotate(3deg); }
   .cons__play {
     cursor: pointer;
     border-radius: 50%;
